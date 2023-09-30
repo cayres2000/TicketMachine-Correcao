@@ -100,7 +100,7 @@ class Troco {
 
         @Override
         public boolean hasNext() {
-            for (int i = 6; i >= 0; i++) {
+            for (int i = 0; i < 6; i++) {//Corrigido
                 if (troco.papeisMoeda[i] != null) {
                     return true;
                 }
@@ -111,7 +111,7 @@ class Troco {
         @Override
         public PapelMoeda next() {
             PapelMoeda ret = null;
-            for (int i = 6; i >= 0 && ret != null; i++) {
+            for (int i = 0; i < 6 && ret == null; i++) {//Corrigido Issue Ret e Loop Infinito
                 if (troco.papeisMoeda[i] != null) {
                     ret = troco.papeisMoeda[i];
                     troco.papeisMoeda[i] = null;
