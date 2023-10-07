@@ -22,5 +22,5 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Ant
-      run: javac ../TicketMachine.java
+      run: javac ../Source Code Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java
     
