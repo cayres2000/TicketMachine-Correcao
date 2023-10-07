@@ -22,5 +22,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Ant
-      run: cd ../"Source Code Inspection" ant -f -buildfile build.xml
-    
+      run:  ant -f -buildfile "Source Code Inspection/build.xml"    
