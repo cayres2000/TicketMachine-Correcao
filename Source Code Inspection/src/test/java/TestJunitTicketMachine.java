@@ -36,6 +36,7 @@ public class TestJunitTicketMachine {
         assertEquals(2,ticketTroco.papeisMoeda[0].getQuantidade());
     }
     */
+    private TicketMachine ticketMachine;
     @Before
     public void setUp() {
         ticketMachine = new TicketMachine(100);
