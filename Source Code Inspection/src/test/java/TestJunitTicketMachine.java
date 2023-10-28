@@ -11,15 +11,15 @@ import static org.junit.Assert.assertThrows;
 public class TestJunitTicketMachine {
 
     @Test
-    public void TesteClasseTroco() 
+    public void TesteClasseTrocoValorNotas() 
     {
         Troco ticketTroco = new Troco(189);
         
-        assertEquals(1,ticketTroco.papeisMoeda[5].getValor());     
-        assertEquals(1,ticketTroco.papeisMoeda[1].getQuantidade());       
-        assertEquals(1,ticketTroco.papeisMoeda[2].getQuantidade());
-        assertEquals(1,ticketTroco.papeisMoeda[3].getQuantidade());
-        assertEquals(1,ticketTroco.papeisMoeda[4].getQuantidade());   
-        assertEquals(2,ticketTroco.papeisMoeda[5].getValor());
+        assertEquals(100,ticketTroco.papeisMoeda[5].getValor());     
+        assertEquals(50,ticketTroco.papeisMoeda[4].getValor());       
+        assertEquals(20,ticketTroco.papeisMoeda[3].getValor());
+        assertEquals(10,ticketTroco.papeisMoeda[2].getValor());
+        assertEquals(5,ticketTroco.papeisMoeda[1].getValor());   
+        assertEquals(2,ticketTroco.papeisMoeda[0].getValor());
     }
 }
