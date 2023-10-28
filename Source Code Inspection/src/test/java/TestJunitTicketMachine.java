@@ -2,29 +2,48 @@ package br.calebe.ticketmachine.core;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import br.calebe.ticketmachine.exception.SaldoInsuficienteException;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.Before;
 
-/**
- *
- * @author unifvgago
- */
-public class JUnitTest {
-    
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
+public class TestTicketMachine {
+
+    private TicketMachine ticketMachine;
+
+    @Before
+    public void setUp() {
+        ticketMachine = new TicketMachine(100);
+    }
+
     @Test
-    public void testClasseTroco() 
-    {
-        Troco ticketTroco = new Troco(189);
-        
-        assertEquals(ticketTroco.papeisMoeda[5], 1);     
-        assertEquals(ticketTroco.papeisMoeda[4], 1);       
-        assertEquals(ticketTroco.papeisMoeda[3], 1);
-        assertEquals(ticketTroco.papeisMoeda[2], 1);
-        assertEquals(ticketTroco.papeisMoeda[1], 1);   
-        assertEquals(ticketTroco.papeisMoeda[0], 2);
+    //teste para verificar a insercao se um valor valido
+    public void testInserirValidQuantia() throws PapelMoedaInvalidaException {
+        ticketMachine.inserir(100);  
+        assertEquals(100, ticketMachine.getSaldo());
+    }
+
+    @Test
+    public void testGetTroco() throws PapelMoedaInvalidaException {
+        assertEquals(-100, ticketMachine.getTroco());
+    }
+ 
+    @Test
+    //teste para verificar a impressao com saldo suficiente
+    public void testImprimirTicketWithSufficientBalance() throws SaldoInsuficienteException,PapelMoedaInvalidaException {
+        ticketMachine.inserir(100);  
+        String ticket = ticketMachine.imprimir();
+        String resposta = "*****************\n";
+        resposta += "*** R$ 100,00 ****\n";
+        resposta += "*****************\n";
+        assertEquals(resposta, ticket);
+        assertEquals(0, ticketMachine.getSaldo());
+    }
+
+    @Test(expected = PapelMoedaInvalidaException.class)
+    //teste para verificar a insercao de valores invalidos na maquina
+    public void testInserirInvalidQuantia() throws PapelMoedaInvalidaException {
+        ticketMachine.inserir(17);  
     }
 }
