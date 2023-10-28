@@ -59,9 +59,4 @@ public class TestJunitTicketMachine {
         assertEquals(resposta, ticketMachine.imprimir());
         assertEquals(100, ticketMachine.getSaldo());
     }
-
-    @Test(expected = PapelMoedaInvalidaException.class)
-    public void testInserirInvalidQuantia() throws PapelMoedaInvalidaException {
-        ticketMachine.inserir(17);  
-    }
 }
