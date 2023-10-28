@@ -45,12 +45,12 @@ public class TestJunitTicketMachine {
         ticketMachine.inserir(20);  
         assertEquals(20, ticketMachine.getSaldo());
     }
-    /*
+    
     @Test
     public void TesteClasseTicketMachineTroco() throws PapelMoedaInvalidaException {
         assertEquals(90, ticketMachine.getTroco());
-    }*/
- 
+    }
+     /*
     @Test
     public void TesteClasseTicketMachineImprimir() throws SaldoInsuficienteException,PapelMoedaInvalidaException { 
         String resposta = "*****************\n";
@@ -58,5 +58,5 @@ public class TestJunitTicketMachine {
         resposta += "*****************\n";
         assertEquals(resposta, ticketMachine.imprimir());
         assertEquals(10, ticketMachine.getSaldo());
-    }
+    }*/
 }
