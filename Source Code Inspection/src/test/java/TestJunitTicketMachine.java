@@ -22,7 +22,7 @@ public class TestJunitTicketMachine {
         assertEquals(5,ticketTroco.papeisMoeda[1].getValor());   
         assertEquals(2,ticketTroco.papeisMoeda[0].getValor());
     }
-    /*
+    
     @Test
     public void TesteClasseTrocoQuantidade() 
     {
@@ -35,7 +35,7 @@ public class TestJunitTicketMachine {
         assertEquals(5,ticketTroco.papeisMoeda[1].getQuantidade());   
         assertEquals(2,ticketTroco.papeisMoeda[0].getQuantidade());
     }
-
+    /*
     @Test
     public void TesteClasseTicketMachine() 
     {
