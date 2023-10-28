@@ -20,6 +20,6 @@ public class TestJunitTicketMachine {
         assertEquals(1,ticketTroco.papeisMoeda[2].getQuantidade());
         assertEquals(1,ticketTroco.papeisMoeda[3].getQuantidade());
         assertEquals(1,ticketTroco.papeisMoeda[4].getQuantidade());   
-        assertEquals(2,ticketTroco.papeisMoeda[5].getQuantidade());
+        assertEquals(2,ticketTroco.papeisMoeda[5].getValor());
     }
 }
