@@ -46,6 +46,6 @@ public class TestJunitTicketMachine {
         result += "*** R$ 20,00 ****\n";//Corrigido
         result += "*****************\n";
 
-        assertEquals(result,ticketMachine.imprimir()));
+        assertEquals(result,ticketMachine.imprimir());
     }
 }
