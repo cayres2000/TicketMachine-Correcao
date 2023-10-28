@@ -15,11 +15,11 @@ public class TestJunitTicketMachine {
     {
         Troco ticketTroco = new Troco(189);
         
-        assertEquals(ticketTroco.papeisMoeda[5].getQuantidade(), 1);     
-        assertEquals(ticketTroco.papeisMoeda[4].getQuantidade(), 1);       
-        assertEquals(ticketTroco.papeisMoeda[3].getQuantidade(), 1);
-        assertEquals(ticketTroco.papeisMoeda[2].getQuantidade(), 1);
-        assertEquals(ticketTroco.papeisMoeda[1].getQuantidade(), 1);   
-        assertEquals(ticketTroco.papeisMoeda[0].getQuantidade(), 2);
+        assertEquals(1,ticketTroco.papeisMoeda[0].getQuantidade());     
+        assertEquals(1,ticketTroco.papeisMoeda[1].getQuantidade());       
+        assertEquals(1,ticketTroco.papeisMoeda[2].getQuantidade());
+        assertEquals(1,ticketTroco.papeisMoeda[3].getQuantidade());
+        assertEquals(1,ticketTroco.papeisMoeda[4].getQuantidade());   
+        assertEquals(2,ticketTroco.papeisMoeda[5].getQuantidade());
     }
 }
