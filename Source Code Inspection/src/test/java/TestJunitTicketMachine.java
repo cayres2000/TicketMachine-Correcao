@@ -12,11 +12,11 @@ public class TestJunitTicketMachine {
     private TicketMachine ticketMachine;
     private Troco ticketTroco;
     @Before
-    public void setUp() {
+    public void InstanciandoClassesDeTeste() {
         ticketMachine = new TicketMachine(10);
         ticketTroco = new Troco(189);
     }
-    /*
+    
     @Test
     public void TesteClasseTrocoValorNotas() 
     {
@@ -50,7 +50,7 @@ public class TestJunitTicketMachine {
     public void TesteClasseTicketMachineTroco() throws PapelMoedaInvalidaException {
         assertEquals(90, ticketMachine.getTroco());
     }
-     */
+     
     @Test
     public void TesteClasseTicketMachineImprimir() throws SaldoInsuficienteException,PapelMoedaInvalidaException { 
         String resposta = "*****************\n";
